@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to Semiconductors</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #60a5fa;
+            --dark-color: #1f2937;
+            --light-color: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            background-color: transparent;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-custom {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-cpu me-2"></i>Semiconductor Guide
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#applications">Applications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#future">Future</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+    <!-- Introduction Section -->
+    <section id="introduction" class="mb-5 animate-fade-in">
+        <div class="card border-0">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <!-- Using Full Path for Electronics Image -->
+                    <img src="file:///Users/francisco/Downloads/Electronics.webp" 
+                         class="card-img-top rounded-start" alt="Electronics">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="card-body">
+                        <h2 class="card-title display-5 fw-bold mb-4">Understanding Semiconductors</h2>
+                        <p class="lead mb-4">
+                            Semiconductors are the foundation of modern electronics, enabling the digital revolution 
+                            through their unique electrical properties. These materials form the basis of all 
+                            computing systems and smart devices.
+                        </p>
+                        <div class="d-grid gap-3 d-sm-flex">
+                            <button class="btn btn-custom">
+                                <i class="bi bi-book me-2"></i>Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="mb-5">
+        <div class="section-header">
+            <h2 class="display-6 fw-bold">Key Applications</h2>
+            <p class="text-muted">Powering Modern Technology</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <!-- Using Full Path for Optoelectronics Image -->
+                    <img src="file:///Users/francisco/Downloads/Optoelectronics.webp" 
+                         class="card-img-top" alt="Optoelectronics">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightbulb text-white fs-4"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Optoelectronics</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check2-circle me-2 text-primary"></i>Lasers & LEDs</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle me-2 text-primary"></i>Solar Cells</li>
+                            <li><i class="bi bi-check2-circle me-2 text-primary"></i>Fiber Optics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Developments Section -->
+    <section id="future" class="mb-5">
+        <div class="section-header">
+            <h2 class="display-6 fw-bold">Future Innovations</h2>
+            <p class="text-muted">Emerging Technologies</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold mb-3">
+                            <i class="bi bi-lightbulb me-2 text-warning"></i>Advanced Materials
+                        </h5>
+                        <p class="card-text">
+                            Next-generation semiconductors using graphene and other 2D materials promise 
+                            unprecedented performance and energy efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Semiconductor Guide. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
